@@ -649,17 +649,185 @@ button {
   margin: 0 6px;
 }
 
+/* Articles */
+.articles {
+  padding: 120px var(--gutter) 100px;
+}
+.articles-title {
+  font-family: var(--mono);
+  font-weight: 800;
+  font-size: clamp(48px, 8vw, 92px);
+  line-height: 1;
+  text-align: right;
+  margin: 0 0 32px;
+}
+.articles-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.articles-pager {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pager-dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  font-size: 10px;
+  color: var(--text-soft);
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.pager-dot:hover,
+.pager-dot.is-active {
+  background: var(--accent);
+  color: var(--on-accent);
+  border-color: var(--accent);
+}
+.articles-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.article-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+.article-card:hover {
+  border-color: var(--line-strong);
+}
+.article-card__title {
+  font-family: var(--mono);
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+.article-card__desc {
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--text-soft);
+  margin: 0 0 16px;
+  flex: 1;
+}
+.article-card__actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Footer */
 .site-footer {
+  display: block;
+  padding: 40px var(--gutter) 28px;
+  color: var(--text);
+  font-size: 12px;
+  position: relative;
+}
+.site-footer::before {
+  content: "";
+  position: absolute;
+  left: -160px;
+  bottom: -120px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  pointer-events: none;
+}
+.footer-top {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 28px 40px;
-  font-size: 12px;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: 48px;
+  position: relative;
+}
+.footer-name {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.footer-name__line {
+  font-family: var(--mono);
+  font-weight: 800;
+  font-size: clamp(48px, 8vw, 92px);
+  line-height: 1.05;
+}
+.footer-name__line--indent {
+  padding-left: clamp(24px, 6vw, 90px);
+}
+.footer-role {
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  font-size: 11px;
+  line-height: 1.4;
   color: var(--muted);
 }
-.site-footer a:hover {
+.footer-contacts {
+  width: 100%;
+  max-width: 360px;
+}
+.footer-contacts .section-label {
+  margin: 0 0 14px;
+  text-align: right;
+}
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.footer-nav a:hover {
   color: var(--text);
+}
+.footer-box {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px 18px;
+  background: var(--card);
+}
+.footer-box p {
+  margin: 0 0 6px;
+  font-size: 11px;
+  color: var(--text-soft);
+}
+.footer-box p:last-child {
+  margin: 0;
+}
+.footer-box__title {
+  font-family: var(--mono);
+  font-weight: 700;
+  color: var(--text) !important;
+}
+.footer-box a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.footer-box a:hover {
+  color: var(--accent);
+}
+.footer-socials {
+  position: relative;
 }
 
 /* Responsive */
@@ -701,6 +869,33 @@ button {
   }
   .work-title {
     margin: 0 24px 20px;
+  }
+  .articles-layout {
+    flex-direction: column;
+  }
+  .articles-pager {
+    flex-direction: row;
+  }
+  .articles-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .articles-title {
+    text-align: left;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-role {
+    position: static;
+    margin-top: 8px;
+  }
+  .footer-contacts {
+    max-width: none;
+  }
+  .footer-contacts .section-label {
+    text-align: left;
   }
 }
 

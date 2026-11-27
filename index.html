@@ -404,11 +404,199 @@
             </li>
           </ol>
         </section>
+        <section
+          id="articles"
+          class="articles"
+          aria-labelledby="articles-title"
+        >
+          <h2 id="articles-title" class="articles-title">Articles</h2>
+          <div class="articles-layout">
+            <ol class="articles-pager" aria-label="Articles pages">
+              <li>
+                <button
+                  type="button"
+                  class="pager-dot is-active"
+                  aria-current="page"
+                >
+                  1
+                </button>
+              </li>
+              <li><button type="button" class="pager-dot">2</button></li>
+              <li><button type="button" class="pager-dot">3</button></li>
+            </ol>
+            <div class="articles-grid">
+              <article class="article-card">
+                <h3 class="article-card__title">
+                  Multi-tenant websites in ASP.NET Core + Razor Pages
+                </h3>
+                <p class="article-card__desc">
+                  This article shows how to serve many branded sites from one
+                  codebase, using middleware to resolve the company on every
+                  request.
+                </p>
+                <div class="article-card__actions">
+                  <a href="#" class="read-more">Read more</a>
+                  <span class="round-btn round-btn--sm" aria-hidden="true"
+                    ><svg class="icon" viewBox="0 0 24 24">
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 12h14M13 6l6 6-6 6"
+                      /></svg
+                  ></span>
+                </div>
+              </article>
+              <article class="article-card">
+                <h3 class="article-card__title">
+                  The simplest example of IHttpClientFactory + JSON data
+                </h3>
+                <p class="article-card__desc">
+                  This article presents a clean way to fetch remote JSON in
+                  Razor Pages using named clients and per-page PageModel
+                  loading.
+                </p>
+                <div class="article-card__actions">
+                  <a href="#" class="read-more">Read more</a>
+                  <span class="round-btn round-btn--sm" aria-hidden="true"
+                    ><svg class="icon" viewBox="0 0 24 24">
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 12h14M13 6l6 6-6 6"
+                      /></svg
+                  ></span>
+                </div>
+              </article>
+              <article class="article-card">
+                <h3 class="article-card__title">
+                  Responsive UI + scroll effects with Tailwind CSS
+                </h3>
+                <p class="article-card__desc">
+                  A practical guide to building responsive navbars, hero
+                  sections and scroll animations using Tailwind and vanilla
+                  JavaScript.
+                </p>
+                <div class="article-card__actions">
+                  <a href="#" class="read-more">Read more</a>
+                  <span class="round-btn round-btn--sm" aria-hidden="true"
+                    ><svg class="icon" viewBox="0 0 24 24">
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 12h14M13 6l6 6-6 6"
+                      /></svg
+                  ></span>
+                </div>
+              </article>
+              <article class="article-card">
+                <h3 class="article-card__title">
+                  Vanilla JS animations in a Razor Pages project
+                </h3>
+                <p class="article-card__desc">
+                  This article explains how to add smooth scroll-driven hero
+                  animations without any framework, keeping the page fast and
+                  simple.
+                </p>
+                <div class="article-card__actions">
+                  <a href="#" class="read-more">Read more</a>
+                  <span class="round-btn round-btn--sm" aria-hidden="true"
+                    ><svg class="icon" viewBox="0 0 24 24">
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 12h14M13 6l6 6-6 6"
+                      /></svg
+                  ></span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer id="contacts" class="site-footer">
-        <p>&copy; <span data-year>2026</span> Puja Rai</p>
-        <a href="mailto:rpuja7700@gmail.com">rpuja7700@gmail.com</a>
+        <div class="footer-top">
+          <div class="footer-name">
+            <span class="footer-name__line">Puja</span>
+            <span class="footer-name__line footer-name__line--indent">Rai</span>
+            <small class="footer-role">Full-stack<br />developer</small>
+          </div>
+
+          <div class="footer-contacts">
+            <h2 class="section-label">.../Contacts/...</h2>
+            <nav class="footer-nav" aria-label="Footer">
+              <a href="#">Main</a>
+              <a href="#about">About</a>
+              <a href="#projects">Projects</a>
+              <a href="#articles">Articles</a>
+            </nav>
+            <div class="footer-box">
+              <p class="footer-box__title">Site</p>
+              <p>Copyright &copy; <span data-year>2026</span></p>
+            </div>
+          </div>
+        </div>
+
+        <ul class="socials footer-socials" aria-label="Social links">
+          <li>
+            <a
+              class="social"
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.46-1.1-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+                />
+              </svg>
+              <span>Github</span></a
+            >
+          </li>
+          <li>
+            <a
+              class="social"
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"
+                />
+              </svg>
+              <span>LinkedIn</span></a
+            >
+          </li>
+          <li>
+            <a class="social" href="mailto:rpuja7700@gmail.com">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                  d="M3 5h18v14H3zM3 6l9 7 9-7"
+                />
+              </svg>
+              <span>E-mail</span></a
+            >
+          </li>
+        </ul>
       </footer>
     </div>
     <script src="js/script.js"></script>
